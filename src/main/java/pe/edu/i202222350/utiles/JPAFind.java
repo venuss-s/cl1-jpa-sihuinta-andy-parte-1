@@ -16,9 +16,8 @@ public class JPAFind {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("world");
         EntityManager em = emf.createEntityManager();
 
-
         try {
-            Country country = em.find(Country.class, "PER");
+            Country country = em.find(Country.class, "PE");
 
             if (country != null) {
                 String jpql = "SELECT c FROM City c WHERE c.country.code = :countryCode AND c.Population > 700000";
@@ -31,7 +30,7 @@ public class JPAFind {
                         .map(City::getName)
                         .forEach(System.out::println);
             } else {
-                System.out.println("no se encontro el codigo");
+                System.out.println("No se encontró el país con código PER.");
             }
         } catch (Exception e) {
             e.printStackTrace();

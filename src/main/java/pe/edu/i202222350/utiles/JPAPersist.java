@@ -19,15 +19,15 @@ public class JPAPersist {
 
             // Define países
             Country gotica = new Country(
-                    "AB", "Gotica", Continent.ASIA, "Innovation", 790000.0, 2024, 9000000,
+                    "AB", "Gotica", Continent.Asia, "Innovation", 790000.0, 2024, 9000000,
                     85.0, 15000.0, 89000.0, "Gotica Local", "Republic", "Andy Sihuinta", 1, "SP1");
 
             Country azafran = new Country(
-                    "AC", "Azafran", Continent.ANTARCTICA, "Technology", 650000.0, 2024, 6000000,
+                    "AC", "Azafran", Continent.Antarctica, "Technology", 650000.0, 2024, 6000000,
                     90.0, 12000.0, 11300.0, "Azafran Local", "Republic", "Alejandro Suarez", 2, "BI2");
 
             Country wakanda = new Country(
-                    "AD", "Wakanda", Continent.ASIA, "Education", 800000.0, 2024, 7000000,
+                    "AD", "Wakanda", Continent.Asia, "Education", 800000.0, 2024, 7000000,
                     80.0, 13100.0, 12300.0, "Wakanda Local", "Republic", "Alexeyr Sihuinta", 3, "CT3");
 
             // Persiste países

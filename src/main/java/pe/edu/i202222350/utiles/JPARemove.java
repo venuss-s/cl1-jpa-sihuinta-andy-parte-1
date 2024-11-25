@@ -1,4 +1,5 @@
 package pe.edu.i202222350.utiles;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -9,15 +10,17 @@ public class JPARemove {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("world");
         EntityManager em = emf.createEntityManager();
 
-
         try {
             em.getTransaction().begin();
-            //ELIMINAR paises
-            Country country = em.find(Country.class, "AD");
+
+            // Verifica si el país existe en la base de datos
+            Country country = em.find(Country.class, "AB");
 
             if (country != null) {
+                // Muestra el país antes de eliminarlo
+                System.out.println("País encontrado: " + country.getName());
                 em.remove(country);
-                System.out.println("País " + country.getName() + " eliminado .");
+                System.out.println("País " + country.getName() + " eliminado.");
             } else {
                 System.out.println("País no encontrado.");
             }
@@ -33,6 +36,5 @@ public class JPARemove {
             em.close();
             emf.close();
         }
-
     }
 }
